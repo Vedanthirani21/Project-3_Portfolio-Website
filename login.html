@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+
+    <!-- ----------Home---------- -->
+
+    <section id="home">
+        <nav>
+            <a href="index.html"><img src="" alt=""></a>
+            <div class="nav-links" id="navlinks">
+                <i class="fa-solid fa-arrow-right" onclick="hidemenu()"></i>
+                <ul>
+                    <li><a href="#home">home</a></li>
+                    <li><a href="#about">about</a></li>
+                    <li><a href="#projects">projects</a></li>
+                    <li><a href="#contact">contact</a></li>
+                </ul>
+            </div>
+            <i class="fa-solid fa-bars" onclick="showmenu()"></i>
+        </nav>
+        <div class="text-box">
+            <div class="left">
+                <h1>Hi I Am </h1>
+            </div>
+            <div class="right">
+               <h1  style="font-size: 60px;">VEDANT HIRANI</h1><br>
+            </div>
+            <p>A Web Devloper Passionate About Creating Innovative, User-Friendly Websites <br>And Staying Updated On The Latest Technologies. </p>
+            <a href="" class="hero-btn">Visit My Office.</a>
+        </div>
+    </section>
+
+
+    <!-- ----------about---------- -->
+
+    <section id="about">
+        <h1>About Me </h1><br><br>
+        <div class="aboutme">
+            <div class="about-col">
+                <img src="images/vedantphoto.jpg" alt="No image found">
+            </div>
+            <div>
+                <p style="color: rgb(38, 36, 36);"><b> With Expertise In A Multitude Of Coding Languages, I Am A Seasoned Professional Web Developer Dedicated To Crafting Seamless Digital Experiences. From Front-End Frameworks To Back-End Technologies, I Thrive On Implementing Robust Solutions, Staying Abreast Of Industry Trends, And Delivering Cutting-Edge Websites And Applications.</b></p>  
+            </div>
+        </div>
+
+        <!-- ----------projects---------- -->
+
+    </section>
+    <section id="projects">
+        <h1>My projects</h1>
+        <p>Having spearheaded numerous projects, I excel in managing diverse initiatives, ensuring seamless collaboration, and delivering successful outcomes within deadlines and budget constraints.</p>
+        <div class="row">
+            <div class="project-col">
+                <h3>Portfolio</h3>
+                <p>Crafted a dynamic web portfolio showcasing my diverse projects, skills, and passion for innovative web development.</p>
+            </div>
+            <div class="project-col">
+                <h3>Calculator</h3>
+                <p>Designed a sleek calculator using HTML and CSS, demonstrating my frontend skills with intuitive user interface.</p>
+            </div>
+            <div class="project-col">
+                <h3>Comming Soon</h3>
+                <p>On going Projects will displayed after some time.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Space for YouTube video -->
+    <div class="youtube-video">
+        <center><h1>What is Portfolio:</h1></center>
+        <center><iframe width="1000" height="500" src="https://www.youtube.com/embed/qcrtDOQxmkc?si=Zi2LJybBXwjBTfXq" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe></center>
+    </div>
+</section>
+
+
+    <!-- ----------Contact---------- -->
+
+    <section id="contact">
+      <h1>Contact Me</h1><br>
+       <p>Get in touch for collaborations, inquiries, or a friendly chat. I'm here and eager to connect with you!</p>
+       <div class="icons">
+        <a href=""  target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+        <a href=""><i class="fa-brands fa-instagram"></i></a>
+        <a href=""><i class="fa-brands fa-facebook-f"></i></a>
+        <a href=""><i class="fa-brands fa-github"></i></a>
+       </div>
+       <p>Made By VEDANT</p>
+    </section>
+
+    <!-- ----------J.s For Menu---------- -->  
+
+    <script>
+        var navlinks = document.getElementById("navlinks");
+        function showmenu(){
+            navlinks.style.right = "0";
+        }
+        function hidemenu(){
+            navlinks.style.right = "-200px";
+        }
+    </script>
+</body>
+</html>

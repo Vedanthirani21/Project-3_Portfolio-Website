@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Poppins', sans-serif;
+            background-image: linear-gradient(-45deg, #47cff5, #262525 70%);
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-box {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+            width: 400px;
+            text-align: center;
+            color: white;
+        }
+
+        .login-box h1 {
+            font-size: 48px;
+            margin-bottom: 30px;
+            color: #fff;
+        }
+
+        .textbox {
+            margin: 15px 0;
+            position: relative;
+        }
+
+        .textbox input {
+            width: 100%;
+            padding: 12px 5px;
+            background: rgba(255, 255, 255, 0.2);
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            color: white;
+            outline: none;
+        }
+
+        .textbox i {
+            position: absolute;
+            left: -20px;
+            top: 50%;
+            transform: translateY(-50%);
+            color: white;
+        }
+
+        .hero-btn {
+            display: inline-block;
+            text-decoration: none;
+            color: #ffffff;
+            background-color: #47cff5;
+            border: 2.5px solid #ffffff;
+            padding: 12px 25px;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 25px;
+            cursor: pointer;
+            transition: 0.5s;
+        }
+
+        .hero-btn:hover {
+            color: #262525;
+            background-color: #ffffff;
+            transition: 0.5s;
+        }
+
+        #error-message {
+            margin-top: 15px;
+            font-size: 16px;
+            color: red;
+        }
+
+        @media (max-width: 700px) {
+            .login-box {
+                width: 90%;
+            }
+
+            .login-box h1 {
+                font-size: 36px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <section id="login">
+        <div class="login-box">
+            <h1>Login</h1>
+            <form id="loginForm" onsubmit="return validateLogin()">
+                <div class="textbox">
+                    <i class="fas fa-user"></i>
+                    <input type="text" id="userId" placeholder="User ID" required>
+                </div>
+                <div class="textbox">
+                    <i class="fas fa-lock"></i>
+                    <input type="password" id="password" placeholder="Password" required>
+                </div>
+                <button type="submit" class="hero-btn">Login</button>
+                <p id="error-message"></p>
+            </form>
+        </div>
+    </section>
+
+    <script>
+        // Dummy credentials for validation
+        const validUserId = "admin";
+        const validPassword = "admin123";
+
+        function validateLogin() {
+            const userId = document.getElementById('userId').value;
+            const password = document.getElementById('password').value;
+            const errorMessage = document.getElementById('error-message');
+            
+            // Validate user ID and password
+            if (userId === validUserId && password === validPassword) {
+                window.location.href = "login.html"; // Redirect to index.html upon successful login
+                return false; // Prevent form submission as it's just a redirection
+            } else {
+                errorMessage.textContent = "Wrong ID or password! Please try again.";
+                return false; // Prevent form submission
+            }
+        }
+    </script>
+</body>
+</html>
